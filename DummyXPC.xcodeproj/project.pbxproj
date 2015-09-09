@@ -17,6 +17,8 @@
 		4482201D1BA04DE9004A0E5A /* DummyService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 448220111BA04DE9004A0E5A /* DummyService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		448220241BA04E15004A0E5A /* CatWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448220231BA04E15004A0E5A /* CatWrapper.swift */; };
 		448220251BA04E15004A0E5A /* CatWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448220231BA04E15004A0E5A /* CatWrapper.swift */; };
+		448220311BA05A5A004A0E5A /* PersonWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 448220301BA05A5A004A0E5A /* PersonWrapper.m */; };
+		448220321BA05A5A004A0E5A /* PersonWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 448220301BA05A5A004A0E5A /* PersonWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,9 @@
 		448220191BA04DE9004A0E5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		448220221BA04E15004A0E5A /* DummyService-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DummyService-Bridging-Header.h"; sourceTree = "<group>"; };
 		448220231BA04E15004A0E5A /* CatWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatWrapper.swift; sourceTree = "<group>"; };
+		448220271BA05747004A0E5A /* DummyXPC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DummyXPC-Bridging-Header.h"; sourceTree = "<group>"; };
+		4482202F1BA05A5A004A0E5A /* PersonWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonWrapper.h; sourceTree = "<group>"; };
+		448220301BA05A5A004A0E5A /* PersonWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				448220231BA04E15004A0E5A /* CatWrapper.swift */,
+				4482202F1BA05A5A004A0E5A /* PersonWrapper.h */,
+				448220301BA05A5A004A0E5A /* PersonWrapper.m */,
 				44821FED1BA04DD7004A0E5A /* DummyXPC */,
 				448220001BA04DD7004A0E5A /* DummyXPCTests */,
 				448220121BA04DE9004A0E5A /* DummyService */,
 				44821FEC1BA04DD7004A0E5A /* Products */,
 				448220221BA04E15004A0E5A /* DummyService-Bridging-Header.h */,
+				448220271BA05747004A0E5A /* DummyXPC-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -305,6 +313,7 @@
 			files = (
 				448220241BA04E15004A0E5A /* CatWrapper.swift in Sources */,
 				44821FF31BA04DD7004A0E5A /* ViewController.swift in Sources */,
+				448220311BA05A5A004A0E5A /* PersonWrapper.m in Sources */,
 				44821FF11BA04DD7004A0E5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +332,7 @@
 			files = (
 				448220251BA04E15004A0E5A /* CatWrapper.swift in Sources */,
 				4482201A1BA04DE9004A0E5A /* main.m in Sources */,
+				448220321BA05A5A004A0E5A /* PersonWrapper.m in Sources */,
 				448220181BA04DE9004A0E5A /* DummyService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,10 +448,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DummyXPC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DummyXPC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -449,10 +462,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DummyXPC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DummyXPC-Bridging-Header.h";
 			};
 			name = Release;
 		};
