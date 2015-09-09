@@ -10,6 +10,20 @@ import Cocoa
 
 class ViewController: NSViewController {
     
+    @IBOutlet weak var myTextLabel: NSTextField!
+
+    func funcGenerator () -> (PersonWrapper!) -> (){
+        func myFuncToShowStuff(person: PersonWrapper!){
+            self.myTextLabel.stringValue = person.name + " Title:" + person.title
+            println(person.name + " Title:" + person.title)
+        }
+        return myFuncToShowStuff
+    }
+    
+    @IBAction func generateButtonPressed(sender: AnyObject) {
+        MyXPCConnector.sharedInstance.objectProxy.getACat(funcGenerator())
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

@@ -19,6 +19,7 @@
 		448220251BA04E15004A0E5A /* CatWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448220231BA04E15004A0E5A /* CatWrapper.swift */; };
 		448220311BA05A5A004A0E5A /* PersonWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 448220301BA05A5A004A0E5A /* PersonWrapper.m */; };
 		448220321BA05A5A004A0E5A /* PersonWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 448220301BA05A5A004A0E5A /* PersonWrapper.m */; };
+		448220381BA06330004A0E5A /* MyXPCConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448220371BA06330004A0E5A /* MyXPCConnector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		448220271BA05747004A0E5A /* DummyXPC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DummyXPC-Bridging-Header.h"; sourceTree = "<group>"; };
 		4482202F1BA05A5A004A0E5A /* PersonWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonWrapper.h; sourceTree = "<group>"; };
 		448220301BA05A5A004A0E5A /* PersonWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonWrapper.m; sourceTree = "<group>"; };
+		448220371BA06330004A0E5A /* MyXPCConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyXPCConnector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				44821FF01BA04DD7004A0E5A /* AppDelegate.swift */,
 				44821FF21BA04DD7004A0E5A /* ViewController.swift */,
+				448220371BA06330004A0E5A /* MyXPCConnector.swift */,
 				44821FF41BA04DD7004A0E5A /* Images.xcassets */,
 				44821FF61BA04DD7004A0E5A /* Main.storyboard */,
 				44821FEE1BA04DD7004A0E5A /* Supporting Files */,
@@ -313,6 +316,7 @@
 			files = (
 				448220241BA04E15004A0E5A /* CatWrapper.swift in Sources */,
 				44821FF31BA04DD7004A0E5A /* ViewController.swift in Sources */,
+				448220381BA06330004A0E5A /* MyXPCConnector.swift in Sources */,
 				448220311BA05A5A004A0E5A /* PersonWrapper.m in Sources */,
 				44821FF11BA04DD7004A0E5A /* AppDelegate.swift in Sources */,
 			);
