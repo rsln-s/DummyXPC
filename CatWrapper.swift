@@ -8,28 +8,28 @@
 
 import Foundation
 
-@objc (CatWrapper) class CatWrapper:NSSecureCoding{
-    var name:String
-    var puffyness:Int
+@objc (CatWrapper) public class CatWrapper:NSSecureCoding{
+    var name:NSString
+    var puffyness:NSString
     
-    init(name:String, puffyness:Int){
+    init(name:NSString, puffyness:NSString){
         self.name = name
         self.puffyness = puffyness
     }
     
-    required convenience init(coder decoder:NSCoder){
-//        let name = decoder.decodeObjectOfClass(String.self, forKey: "name")
-        let name = decoder.decodeObjectForKey("name") as! String
-//        let puffyness = decoder.decodeObjectOfClass(Int.self, forKey: "puffyness")
-        let puffyness = decoder.decodeObjectForKey("puffyness") as! Int
+    required convenience public init(coder decoder:NSCoder){
+        let name = decoder.decodeObjectOfClass(NSString.self, forKey: "name") as! NSString
+//        let name = decoder.decodeObjectForKey("name") as! String
+        let puffyness = decoder.decodeObjectOfClass(NSString.self, forKey: "puffyness") as! NSString
+//        let puffyness = decoder.decodeObjectForKey("puffyness") as! Int
         self.init(name: name, puffyness: puffyness)
     }
     
-    class func supportsSecureCoding() -> Bool {
+    public class func supportsSecureCoding() -> Bool {
         return true
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
+    public func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(self.name, forKey: "name")
         aCoder.encodeObject(self.puffyness, forKey: "puffyness")
     }

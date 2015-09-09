@@ -31,8 +31,8 @@
 {
     if((self = [self init]))
     {
-        [self setName: [coder decodeObjectForKey: @"name"]];
-        [self setTitle: [coder decodeObjectForKey: @"title"]];
+        [self setName: [coder decodeObjectOfClass:[NSString class] forKey:@"name"]];
+        [self setTitle: [coder decodeObjectOfClass: [NSString class] forKey: @"title"]];
     }
     return self;
 }

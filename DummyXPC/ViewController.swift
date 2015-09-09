@@ -15,7 +15,7 @@ class ViewController: NSViewController {
     func funcGenerator () -> (PersonWrapper!) -> (){
         func myFuncToShowStuff(person: PersonWrapper!){
             self.myTextLabel.stringValue = person.name + " Title:" + person.title
-            println(person.name + " Title:" + person.title)
+            println("Man received")
         }
         return myFuncToShowStuff
     }
