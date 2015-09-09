@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "44821FEA1BA04DD7004A0E5A"
-               BuildableName = "DummyXPC.app"
-               BlueprintName = "DummyXPC"
-               ReferencedContainer = "container:DummyXPC.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "44821FFC1BA04DD7004A0E5A"
-               BuildableName = "DummyXPCTests.xctest"
-               BlueprintName = "DummyXPCTests"
+               BlueprintIdentifier = "448220101BA04DE9004A0E5A"
+               BuildableName = "DummyService.xpc"
+               BlueprintName = "DummyService"
                ReferencedContainer = "container:DummyXPC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,26 +28,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "44821FFC1BA04DD7004A0E5A"
-               BuildableName = "DummyXPCTests.xctest"
-               BlueprintName = "DummyXPCTests"
-               ReferencedContainer = "container:DummyXPC.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "44821FEA1BA04DD7004A0E5A"
-            BuildableName = "DummyXPC.app"
-            BlueprintName = "DummyXPC"
-            ReferencedContainer = "container:DummyXPC.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -72,16 +39,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "44821FEA1BA04DD7004A0E5A"
-            BuildableName = "DummyXPC.app"
-            BlueprintName = "DummyXPC"
+            BlueprintIdentifier = "448220101BA04DE9004A0E5A"
+            BuildableName = "DummyService.xpc"
+            BlueprintName = "DummyService"
             ReferencedContainer = "container:DummyXPC.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -91,16 +57,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "44821FEA1BA04DD7004A0E5A"
-            BuildableName = "DummyXPC.app"
-            BlueprintName = "DummyXPC"
+            BlueprintIdentifier = "448220101BA04DE9004A0E5A"
+            BuildableName = "DummyService.xpc"
+            BlueprintName = "DummyService"
             ReferencedContainer = "container:DummyXPC.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

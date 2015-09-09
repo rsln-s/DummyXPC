@@ -12,6 +12,11 @@
 		44821FF51BA04DD7004A0E5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44821FF41BA04DD7004A0E5A /* Images.xcassets */; };
 		44821FF81BA04DD7004A0E5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44821FF61BA04DD7004A0E5A /* Main.storyboard */; };
 		448220041BA04DD7004A0E5A /* DummyXPCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448220031BA04DD7004A0E5A /* DummyXPCTests.swift */; };
+		448220181BA04DE9004A0E5A /* DummyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 448220171BA04DE9004A0E5A /* DummyService.m */; };
+		4482201A1BA04DE9004A0E5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 448220191BA04DE9004A0E5A /* main.m */; };
+		4482201D1BA04DE9004A0E5A /* DummyService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 448220111BA04DE9004A0E5A /* DummyService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		448220241BA04E15004A0E5A /* CatWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448220231BA04E15004A0E5A /* CatWrapper.swift */; };
+		448220251BA04E15004A0E5A /* CatWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448220231BA04E15004A0E5A /* CatWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +27,28 @@
 			remoteGlobalIDString = 44821FEA1BA04DD7004A0E5A;
 			remoteInfo = DummyXPC;
 		};
+		4482201B1BA04DE9004A0E5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44821FE31BA04DD7004A0E5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 448220101BA04DE9004A0E5A;
+			remoteInfo = DummyService;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		448220211BA04DE9004A0E5A /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				4482201D1BA04DE9004A0E5A /* DummyService.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		44821FEB1BA04DD7004A0E5A /* DummyXPC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DummyXPC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +60,14 @@
 		44821FFD1BA04DD7004A0E5A /* DummyXPCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DummyXPCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		448220021BA04DD7004A0E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		448220031BA04DD7004A0E5A /* DummyXPCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyXPCTests.swift; sourceTree = "<group>"; };
+		448220111BA04DE9004A0E5A /* DummyService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = DummyService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		448220141BA04DE9004A0E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		448220151BA04DE9004A0E5A /* DummyServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DummyServiceProtocol.h; sourceTree = "<group>"; };
+		448220161BA04DE9004A0E5A /* DummyService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DummyService.h; sourceTree = "<group>"; };
+		448220171BA04DE9004A0E5A /* DummyService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DummyService.m; sourceTree = "<group>"; };
+		448220191BA04DE9004A0E5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		448220221BA04E15004A0E5A /* DummyService-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DummyService-Bridging-Header.h"; sourceTree = "<group>"; };
+		448220231BA04E15004A0E5A /* CatWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,15 +85,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4482200E1BA04DE9004A0E5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		44821FE21BA04DD7004A0E5A = {
 			isa = PBXGroup;
 			children = (
+				448220231BA04E15004A0E5A /* CatWrapper.swift */,
 				44821FED1BA04DD7004A0E5A /* DummyXPC */,
 				448220001BA04DD7004A0E5A /* DummyXPCTests */,
+				448220121BA04DE9004A0E5A /* DummyService */,
 				44821FEC1BA04DD7004A0E5A /* Products */,
+				448220221BA04E15004A0E5A /* DummyService-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +112,7 @@
 			children = (
 				44821FEB1BA04DD7004A0E5A /* DummyXPC.app */,
 				44821FFD1BA04DD7004A0E5A /* DummyXPCTests.xctest */,
+				448220111BA04DE9004A0E5A /* DummyService.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +154,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		448220121BA04DE9004A0E5A /* DummyService */ = {
+			isa = PBXGroup;
+			children = (
+				448220151BA04DE9004A0E5A /* DummyServiceProtocol.h */,
+				448220161BA04DE9004A0E5A /* DummyService.h */,
+				448220171BA04DE9004A0E5A /* DummyService.m */,
+				448220191BA04DE9004A0E5A /* main.m */,
+				448220131BA04DE9004A0E5A /* Supporting Files */,
+			);
+			path = DummyService;
+			sourceTree = "<group>";
+		};
+		448220131BA04DE9004A0E5A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				448220141BA04DE9004A0E5A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,10 +184,12 @@
 				44821FE71BA04DD7004A0E5A /* Sources */,
 				44821FE81BA04DD7004A0E5A /* Frameworks */,
 				44821FE91BA04DD7004A0E5A /* Resources */,
+				448220211BA04DE9004A0E5A /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4482201C1BA04DE9004A0E5A /* PBXTargetDependency */,
 			);
 			name = DummyXPC;
 			productName = DummyXPC;
@@ -147,6 +214,23 @@
 			productReference = 44821FFD1BA04DD7004A0E5A /* DummyXPCTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		448220101BA04DE9004A0E5A /* DummyService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4482201E1BA04DE9004A0E5A /* Build configuration list for PBXNativeTarget "DummyService" */;
+			buildPhases = (
+				4482200D1BA04DE9004A0E5A /* Sources */,
+				4482200E1BA04DE9004A0E5A /* Frameworks */,
+				4482200F1BA04DE9004A0E5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DummyService;
+			productName = DummyService;
+			productReference = 448220111BA04DE9004A0E5A /* DummyService.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -162,6 +246,9 @@
 					44821FFC1BA04DD7004A0E5A = {
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = 44821FEA1BA04DD7004A0E5A;
+					};
+					448220101BA04DE9004A0E5A = {
+						CreatedOnToolsVersion = 6.4;
 					};
 				};
 			};
@@ -180,6 +267,7 @@
 			targets = (
 				44821FEA1BA04DD7004A0E5A /* DummyXPC */,
 				44821FFC1BA04DD7004A0E5A /* DummyXPCTests */,
+				448220101BA04DE9004A0E5A /* DummyService */,
 			);
 		};
 /* End PBXProject section */
@@ -201,6 +289,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4482200F1BA04DE9004A0E5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -208,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				448220241BA04E15004A0E5A /* CatWrapper.swift in Sources */,
 				44821FF31BA04DD7004A0E5A /* ViewController.swift in Sources */,
 				44821FF11BA04DD7004A0E5A /* AppDelegate.swift in Sources */,
 			);
@@ -221,6 +317,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4482200D1BA04DE9004A0E5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				448220251BA04E15004A0E5A /* CatWrapper.swift in Sources */,
+				4482201A1BA04DE9004A0E5A /* main.m in Sources */,
+				448220181BA04DE9004A0E5A /* DummyService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -228,6 +334,11 @@
 			isa = PBXTargetDependency;
 			target = 44821FEA1BA04DD7004A0E5A /* DummyXPC */;
 			targetProxy = 44821FFE1BA04DD7004A0E5A /* PBXContainerItemProxy */;
+		};
+		4482201C1BA04DE9004A0E5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 448220101BA04DE9004A0E5A /* DummyService */;
+			targetProxy = 4482201B1BA04DE9004A0E5A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -381,6 +492,41 @@
 			};
 			name = Release;
 		};
+		4482201F1BA04DE9004A0E5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DummyService/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DummyService-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		448220201BA04DE9004A0E5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = DummyService/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "DummyService-Bridging-Header.h";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -406,6 +552,14 @@
 			buildConfigurations = (
 				4482200B1BA04DD7004A0E5A /* Debug */,
 				4482200C1BA04DD7004A0E5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4482201E1BA04DE9004A0E5A /* Build configuration list for PBXNativeTarget "DummyService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4482201F1BA04DE9004A0E5A /* Debug */,
+				448220201BA04DE9004A0E5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

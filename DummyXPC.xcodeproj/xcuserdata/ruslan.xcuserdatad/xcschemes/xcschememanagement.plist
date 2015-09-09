@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DummyService.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>DummyXPC.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>44821FFC1BA04DD7004A0E5A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>448220101BA04DE9004A0E5A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
