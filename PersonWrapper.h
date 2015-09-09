@@ -15,6 +15,8 @@
 
 - (void)encodeWithCoder:(NSCoder *)aCoder;
 - (id)initWithCoder:(NSCoder *)aDecoder;
+- (id)initWithName:(NSString *)name_ title:(NSString *)title_;
+
 + (bool)supportsSecureCoding;
 
 @end

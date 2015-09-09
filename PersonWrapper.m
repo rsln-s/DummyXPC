@@ -10,6 +10,17 @@
 
 @implementation PersonWrapper
 
+-(id)initWithName:(NSString *)name_ title:(NSString *)title_
+{
+    self = [super init];
+    if (self) {
+        self.name = name_;
+        self.title = title_;
+    }
+    return self;
+}
+
+
 - (void)encodeWithCoder: (NSCoder *)coder
 {
     [coder encodeObject: [self name] forKey: @"name"];
@@ -25,7 +36,6 @@
     }
     return self;
 }
-         
 
 + (bool)supportsSecureCoding{
     return true;
