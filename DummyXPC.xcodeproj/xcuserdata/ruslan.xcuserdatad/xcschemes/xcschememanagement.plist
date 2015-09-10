@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CatWrapperKIt.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>DummyService.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -22,6 +27,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>446C785D1BA1A18F003B06FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>446C78671BA1A18F003B06FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>44821FEA1BA04DD7004A0E5A</key>
 		<dict>
 			<key>primary</key>

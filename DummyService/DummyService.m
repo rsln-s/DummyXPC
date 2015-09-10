@@ -16,10 +16,10 @@
     reply(response);
 }
 
-- (void)getACat:(void (^)(PersonWrapper *))reply {
-    PersonWrapper* myMan = [[PersonWrapper alloc] initWithName:@"Ruslan" title:@"Student"];
-    NSLog(@"Man created");
-    reply(myMan);
+- (void)getACat:(void (^)(CatWrapper *))reply {
+    CatWrapper* myCat = [CatWrapper initWithName:@"Ruslan" title:@"Student"];
+    NSLog(@"Cat created");
+    reply(myCat);
 }
 
 @end

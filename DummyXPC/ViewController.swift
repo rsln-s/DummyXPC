@@ -7,16 +7,17 @@
 //
 
 import Cocoa
+//import CatWrapperKit
 
 class ViewController: NSViewController {
     
     @IBOutlet weak var myTextLabel: NSTextField!
 
-    func funcGenerator () -> (PersonWrapper!) -> (){
-        func myFuncToShowStuff(person: PersonWrapper!){
-            self.myTextLabel.stringValue = person.name + " Title:" + person.title
+    func funcGenerator () -> (CatWrapper!) -> (){
+        func myFuncToShowStuff(cat: CatWrapper!){
+            self.myTextLabel.stringValue = (cat.name as String) + " Title:" + (cat.title as String)
             println("Man received")
-            println(person.name)
+            println(cat.name)
         }
         return myFuncToShowStuff
     }
@@ -35,7 +36,6 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
 
 }
 

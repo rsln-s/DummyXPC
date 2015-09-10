@@ -9,20 +9,20 @@
 import Foundation
 
 @objc (CatWrapper) public class CatWrapper:NSSecureCoding{
-    var name:NSString
-    var puffyness:NSString
+    public var name:NSString
+    public var title:NSString
     
-    init(name:NSString, puffyness:NSString){
+    public init(name:NSString, title:NSString){
         self.name = name
-        self.puffyness = puffyness
+        self.title = title
     }
     
     required convenience public init(coder decoder:NSCoder){
         let name = decoder.decodeObjectOfClass(NSString.self, forKey: "name") as! NSString
 //        let name = decoder.decodeObjectForKey("name") as! String
-        let puffyness = decoder.decodeObjectOfClass(NSString.self, forKey: "puffyness") as! NSString
+        let title = decoder.decodeObjectOfClass(NSString.self, forKey: "title") as! NSString
 //        let puffyness = decoder.decodeObjectForKey("puffyness") as! Int
-        self.init(name: name, puffyness: puffyness)
+        self.init(name: name, title: title)
     }
     
     public class func supportsSecureCoding() -> Bool {
@@ -31,6 +31,6 @@ import Foundation
     
     public func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(self.name, forKey: "name")
-        aCoder.encodeObject(self.puffyness, forKey: "puffyness")
+        aCoder.encodeObject(self.title, forKey: "title")
     }
 }

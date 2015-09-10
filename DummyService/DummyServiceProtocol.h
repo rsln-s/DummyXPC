@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "PersonWrapper.h"
+#import "CatWrapperKIt.h"
 
 // The protocol that this service will vend as its API. This header file will also need to be visible to the process hosting the service.
 @protocol DummyServiceProtocol
 
 // Replace the API of this protocol with an API appropriate to the service you are vending.
 - (void)upperCaseString:(NSString *)aString withReply:(void (^)(NSString *))reply;
-- (void)getACat:(void (^)(PersonWrapper *))reply;
+- (void)getACat:(void (^)(CatWrapper *))reply;
 
 @end
 
